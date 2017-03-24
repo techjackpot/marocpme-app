@@ -11,6 +11,8 @@
         "maddhatter/laravel-fullcalendar": "^1.2",
         "uxweb/sweet-alert": "^1.4",
         "tymon/jwt-auth": "0.5.*",
+        "symfony/css-selector": "3.1.*",
+        "symfony/dom-crawler": "3.1.*",
         "yajra/laravel-datatables-oracle": "^6.0"
     },
     "require-dev": {
@@ -19,8 +21,6 @@
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~5.0",
-        "symfony/css-selector": "3.1.*",
-        "symfony/dom-crawler": "3.1.*",
         "orchestra/testbench": "~3.0"
     },
     "autoload": {
