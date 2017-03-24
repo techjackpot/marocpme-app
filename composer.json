@@ -10,6 +10,7 @@
         "laravel/framework": "5.3.*",
         "maddhatter/laravel-fullcalendar": "^1.2",
         "uxweb/sweet-alert": "^1.4",
+        "tymon/jwt-auth": "0.5.*",
         "yajra/laravel-datatables-oracle": "^6.0"
     },
     "require-dev": {
@@ -18,7 +19,6 @@
         "phpunit/phpunit": "~5.0",
         "symfony/css-selector": "3.1.*",
         "symfony/dom-crawler": "3.1.*",
-        "tymon/jwt-auth": "0.5.*",
         "orchestra/testbench": "~3.0"
     },
     "autoload": {
