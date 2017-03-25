@@ -1,4 +1,5 @@
 <?php
+
 return [
 
     /*
@@ -25,7 +26,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -66,14 +67,16 @@ return [
         ],
 
         'pgsql' => [
-            'driver'   => 'pgsql',
-            'host'     => parse_url(getenv("DATABASE_URL"))["host"],
-            'database' => substr(parse_url(getenv("DATABASE_URL"))["path"], 1),
-            'username' => parse_url(getenv("DATABASE_URL"))["user"],
-            'password' => parse_url(getenv("DATABASE_URL"))["pass"],
-            'charset'  => 'utf8',
-            'prefix'   => '',
-            'schema'   => 'public',
+            'driver' => 'pgsql',
+            'host' => env('DB_HOST', 'ec2-54-243-185-99.compute-1.amazonaws.com'),
+            'port' => env('DB_PORT', '5432'),
+            'database' => env('DB_DATABASE', 'd8mlokpj5nb190'),
+            'username' => env('DB_USERNAME', 'abxpzheegcuzdk'),
+            'password' => env('DB_PASSWORD', 'f07877d9301ee910e9e3579153deebee712f1f9b7063fe5d38ce174513f6fd53'),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+            'sslmode' => 'prefer',
         ],
 
     ],
