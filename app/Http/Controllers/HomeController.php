@@ -286,11 +286,13 @@ $calendar=new calendar;
 
             if ($request->has('objVisite')) {
                 $objVisite = $request->get('objVisite');
-                exit('3:'.$objVisite);
-                if($objVisite != 'UPI' && $objVisite != 'porteurP')
+                if($objVisite != 'UPI' && $objVisite != 'porteurP') {
                     $prospects->where('imtiaz', true);
-                else
+                    exit('3.fdsfds');
+                }
+                else {
                     $prospects->where('autoEntr', 'like', $objVisite);
+                }
             }
             $prospects = $prospects->get();
 
