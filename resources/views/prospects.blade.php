@@ -500,7 +500,7 @@ $('.nextLi').on('click', function(){
 
 
 
-        $('a.deleteVisit').on('click', function (e) {
+        $('#listUsers').on('click', '.deleteVisit', function (e) {
 
             e.preventDefault();
             swal({
