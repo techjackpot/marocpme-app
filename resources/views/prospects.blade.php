@@ -493,7 +493,7 @@ d.objVisite=$('#objVisite').val();
                 return false;
             });
 
-$('.nextLi')on('click', function(){
+$('.nextLi').on('click', function(){
 
     $('.nav-tabs> .active').next('li').find('a').trigger('click');
 });
