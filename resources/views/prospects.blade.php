@@ -493,14 +493,14 @@ d.objVisite=$('#objVisite').val();
                 return false;
             });
 
-$('.nextLi').click(function(){
+$('.nextLi')on('click', function(){
 
     $('.nav-tabs> .active').next('li').find('a').trigger('click');
 });
 
 
 
-        $('a.deleteVisit').click(function (e) {
+        $('a.deleteVisit').on('click', function (e) {
 
             e.preventDefault();
             swal({
@@ -526,7 +526,7 @@ $('.nextLi').click(function(){
             $(".AE input").prop('checked', false);
             $("#AutoEntre").prop('checked', false);
 
-            $('#AutoEntre').change(function() {
+            $('#AutoEntre').on('change', function() {
 
                 if($(this).is(":checked")) {
                     $(".AE input").prop('disabled', false);
