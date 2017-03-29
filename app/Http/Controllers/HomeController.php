@@ -284,10 +284,9 @@ $calendar=new calendar;
                 }
             }
 
-            var_dump($request);
-            exit('');
             if ($request->has('objVisite')) {
                 $objVisite = $request->get('objVisite');
+                exit('3:'.$objVisite);
                 if($objVisite != 'UPI' && $objVisite != 'porteurP')
                     $prospects->where('imtiaz', true);
                 else
