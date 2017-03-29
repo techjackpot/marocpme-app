@@ -269,7 +269,10 @@ $calendar=new calendar;
                     ->orderBy('created_at', 'desc')
                 ->get();*/
 
-                $prospects =  DB::table(DB::raw("($sql) as prospects"));//->get();
+                //$prospects =  DB::table(DB::raw("($sql) as prospects"));//->get();
+
+                $prospects = prospects::select(['id','nom','prenom', 'mail', 'fonction', 'tel', 'user_id'])
+                    ->orderBy('id','asc');
             }
             else{
                 $prospects = prospects::select(['id','nom','prenom', 'mail', 'fonction', 'tel'])
@@ -287,16 +290,13 @@ $calendar=new calendar;
             if ($request->has('objVisite')) {
                 $objVisite = $request->get('objVisite');
                 if($objVisite != 'UPI' && $objVisite != 'porteurP') {
-                    $prospects->where('imtiaz', true);
+                    $prospects->where($objVisite, true);
                 }
                 else {
                     $prospects->where('autoEntr', 'like', $objVisite);
                 }
             }
             $prospects = $prospects->get();
-            var_dump($prospects);
-            exit('333');
-
 
 //            $datatables =  app('datatables')->of()
                  return Datatables::of($prospects)
