@@ -289,11 +289,13 @@ $calendar=new calendar;
 
             if ($request->has('objVisite')) {
                 $objVisite = $request->get('objVisite');
-                if($objVisite != 'UPI' && $objVisite != 'porteurP') {
-                    $prospects->where($objVisite, true);
-                }
-                else {
-                    $prospects->where('autoEntr', 'like', $objVisite);
+                if($objVisite != '_show_all_') {
+                    if($objVisite != 'UPI' && $objVisite != 'porteurP') {
+                        $prospects->where($objVisite, true);
+                    }
+                    else {
+                        $prospects->where('autoEntr', 'like', $objVisite);
+                    }
                 }
             }
             $prospects = $prospects->get();
