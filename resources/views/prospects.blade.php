@@ -421,8 +421,8 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
                 ajax: {
                     url: '{{ route("ProspectsData")  }}',
                     data: function (d) {
-                        d.selectUserF = $('#selectUserF').val();
-d.objVisite=$('#objVisite').val();
+                        //d.selectUserF = $('#selectUserF').val();
+                        //d.objVisite=$('#objVisite').val();
                     }
                 },
                 "language": {
