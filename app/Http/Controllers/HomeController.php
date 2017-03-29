@@ -298,12 +298,15 @@ $calendar=new calendar;
                 })
             ->filter(function ($query) use ($request) {
                 if ($request->has('selectUserF')) {
-                    $query->where('user_id', '=', "{$request->get('selectUserF')}");
+                    $f_selectUserF = $request->get('selectUserF');
+                    if($f_selectUserF!='allUsers') {
+                        $query->where('user_id', $f_selectUserF);
+                    }
                 }
 
                 if ($request->has('objVisite')) {
                     if($request->get('objVisite')!='UPI'&&$request->get('objVisite')!='porteurP')
-                    $query->where("{$request->get('objVisite')}", '=', 1);
+                        $query->where("{$request->get('objVisite')}", '=', 1);
                     else
                         $query->where('autoEntr', 'like', "{$request->get('objVisite')}");
                 }
