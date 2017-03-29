@@ -288,13 +288,14 @@ $calendar=new calendar;
                 $objVisite = $request->get('objVisite');
                 if($objVisite != 'UPI' && $objVisite != 'porteurP') {
                     $prospects->where('imtiaz', true);
-                    exit('3.fdsfds');
                 }
                 else {
                     $prospects->where('autoEntr', 'like', $objVisite);
                 }
             }
             $prospects = $prospects->get();
+            var_dump($prospects);
+            exit('333');
 
 
 //            $datatables =  app('datatables')->of()
