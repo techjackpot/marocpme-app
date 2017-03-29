@@ -501,7 +501,7 @@ $('.nextLi').on('click', function(){
 
 
         $('#listUsers').on('click', '.deleteVisit', function (e) {
-
+            var url =$(this).data('delete');
             e.preventDefault();
             swal({
                         title: "Vous étes sur que vous voulez supprimer ce prospect?",
@@ -515,6 +515,21 @@ $('.nextLi').on('click', function(){
                     },
                     function(isConfirm){
                         if (isConfirm) {
+                            $.ajax({
+                                url: url,
+                                type: 'GET',
+                                datatype: 'json',
+                                success: function (data) {
+                                    swal("Supprimé!", "Ce prospect est supprimé avec succès.", "success");
+                                    $('#listUsers').DataTable().draw(false);
+                                },
+                                error: function () {
+                                    swal("erreur!", url, "warning");
+                                }
+
+
+                            });
+
                             swal("Supprimé!", "Ce prospect est supprimé avec succès.", "success");
                         } else {
                             swal("Retour", "Ce prospect est toujours a sa plaçe  :)", "error");

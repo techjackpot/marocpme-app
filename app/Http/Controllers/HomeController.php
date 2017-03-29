@@ -284,7 +284,7 @@ $calendar=new calendar;
             ->addColumn('actions', function ($prospect) {
                 $actions = ' <a class="viewVisit" href="' . route("ProspectDetails", ["id" => $prospect->id]) . '"> <img src="' . asset("img/001-eye-copie.png") . '" onmouseover="hover(this,\'' . asset("img/001-eye.png") . '\');" onmouseout="unhover(this,\'' . asset("img/001-eye-copie.png") . '\');"></a>';
                 $actions .= '<a class="editVisit" href="' .route("ProspectEdit",["id"=>$prospect->id]) . '"> <img src="' . asset("img/002-edit-copie.png") . '" onmouseover="hover(this,\'' . asset("img/002-edit.png") . '\');" onmouseout="unhover(this,\'' . asset("img/002-edit-copie.png") . '\');"></a>';
-                $actions .= '<a class="deleteVisit" href="#"> <img src="' . asset("img/003-delete-copie.png") . '" onmouseover="hover(this,\'' . asset("img/003-delete.png") . '\');" onmouseout="unhover(this,\'' . asset("img/003-delete-copie.png") . '\');"></a>';
+                $actions .= '<a class="deleteVisit" href="#" data-delete="'.route('ProspectDestroy',["id"=>$prospect->id]).'""> <img src="' . asset("img/003-delete-copie.png") . '" onmouseover="hover(this,\'' . asset("img/003-delete.png") . '\');" onmouseout="unhover(this,\'' . asset("img/003-delete-copie.png") . '\');"></a>';
 
 
                 return $actions;
@@ -361,6 +361,22 @@ public function editProspectDetails($id){
         return abort(403, 'Unauthorized action.');
 
 }
+    public function destroyProspectDetails($id){
+
+        $prospect=prospects::find($id);
+
+        if($prospect&&$prospect->user_id==Auth::user()->id||Auth::user()->isAdmin=='heIs') {
+            if($prospect->delete()) {
+                return response(['status' => "deleted", 'id' => $prospect->id],200)->withHeaders([
+                    'Content-Type' => 'application/json',
+                ]);
+            }
+            //return view('prospects.details',['prospect'=>$prospect]);
+        }
+        else
+            return abort(403, 'Unauthorized action.');
+
+    }
 
 public function editUserDetails($id)
 {
