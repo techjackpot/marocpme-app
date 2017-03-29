@@ -300,7 +300,9 @@ $calendar=new calendar;
                 if ($request->has('selectUserF')) {
                     $f_selectUserF = $request->get('selectUserF');
                     if($f_selectUserF!='allUsers') {
-                        $query->where('user_id', $f_selectUserF);
+                        $query->collection = $query->collection->filter(function ($row) use ($request) {
+                            return $row['user_id']==$f_selectUserF ? true : false;
+                        });
                     }
                 }
 
