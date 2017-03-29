@@ -49,7 +49,7 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
                 <div class="input-group">
                     <select id="objVisite" name="objVisite"  style="height: 50px;width: 100%;">
                         <option value="" disabled selected>Objet de Visite</option>
-                        <option value="_show_all_">Show all/option>
+                        <option value="_show_all_">Show all</option>
                         <option value="imtiaz">Imtiaz</option>
                         <option value="moussanada">Moussanada</option>
                         <option value="tahfiz">Tahfiz</option>
