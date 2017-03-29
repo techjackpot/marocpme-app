@@ -269,14 +269,28 @@ $calendar=new calendar;
                     ->orderBy('created_at', 'desc')
                 ->get();*/
 
-                $prospects =  DB::table(DB::raw("($sql) as prospects"))->get();
+                $prospects =  DB::table(DB::raw("($sql) as prospects"));//->get();
             }
             else{
                 $prospects = prospects::select(['id','nom','prenom', 'mail', 'fonction', 'tel'])
                     ->where('user_id', Auth::user()->id)
-                    ->orderBy('id','asc')
-                    ->get();
+                    ->orderBy('id','asc');
+                    //->get();
             }
+            if ($request->has('selectUserF')) {
+                $f_selectUserF = $request->get('selectUserF');
+                if($f_selectUserF!='allUsers') {
+                    $prospects->where('user_id', '=', $f_selectUserF);
+                }
+            }
+
+            if ($request->has('objVisite')) {
+                if($request->get('objVisite')!='UPI'&&$request->get('objVisite')!='porteurP')
+                    $prospects->where("{$request->get('objVisite')}", '=', 1);
+                else
+                    $prospects->where('autoEntr', 'like', "{$request->get('objVisite')}");
+            }
+            $prospects = $prospects->get();
 
 
 //            $datatables =  app('datatables')->of()
@@ -296,13 +310,11 @@ $calendar=new calendar;
                     return $prospect->nom.' '.$prospect->prenom;
 
                 })
-            ->filter(function ($query) use ($request) {
+            /*->filter(function ($query) use ($request) {
                 if ($request->has('selectUserF')) {
                     $f_selectUserF = $request->get('selectUserF');
                     if($f_selectUserF!='allUsers') {
-                        $query->collection = $query->collection->filter(function ($row) use ($request) {
-                            return $row['user_id']==$f_selectUserF ? true : false;
-                        });
+                        $query->where('user_id', '=', $f_selectUserF);
                     }
                 }
 
@@ -312,7 +324,7 @@ $calendar=new calendar;
                     else
                         $query->where('autoEntr', 'like', "{$request->get('objVisite')}");
                 }
-            })
+            })*/
 
          /*   if ($request->has('selectUserF')) {
 
