@@ -55,6 +55,7 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::post('/AddNewProspect', 'HomeController@saveProspect')->name('checkObjM');
         Route::put('/updateProspect/{id}', 'HomeController@updateProspect')->name('updateProspect');
+        Route::get('/delete/{id}', 'HomeController@deleteProspect')->name('deleteThisProspect');
 
     });
 
