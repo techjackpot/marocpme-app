@@ -287,7 +287,7 @@ $calendar=new calendar;
             if ($request->has('objVisite')) {
                 $objVisite = $request->get('objVisite');
                 if($objVisite != 'UPI' && $objVisite != 'porteurP')
-                    $prospects->where($objVisite, 1);
+                    $prospects->where($objVisite, true);
                 else
                     $prospects->where('autoEntr', 'like', $objVisite);
             }
