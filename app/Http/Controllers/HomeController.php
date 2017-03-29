@@ -285,10 +285,11 @@ $calendar=new calendar;
             }
 
             if ($request->has('objVisite')) {
-                if($request->get('objVisite')!='UPI'&&$request->get('objVisite')!='porteurP')
-                    $prospects->where("{$request->get('objVisite')}", '=', 1);
+                $objVisite = $request->get('objVisite');
+                if($objVisite != 'UPI' && $objVisite != 'porteurP')
+                    $prospects->where($objVisite, 1);
                 else
-                    $prospects->where('autoEntr', 'like', "{$request->get('objVisite')}");
+                    $prospects->where('autoEntr', 'like', $objVisite);
             }
             $prospects = $prospects->get();
 
