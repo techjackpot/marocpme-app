@@ -284,6 +284,8 @@ $calendar=new calendar;
                 }
             }
 
+            var_dump($request);
+            exit('');
             if ($request->has('objVisite')) {
                 $objVisite = $request->get('objVisite');
                 if($objVisite != 'UPI' && $objVisite != 'porteurP')
