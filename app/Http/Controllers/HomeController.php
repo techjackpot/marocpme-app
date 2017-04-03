@@ -584,7 +584,7 @@ $pros->user_id=Auth::user()->id;
         $prospect->save();
 
         if($request->dateM!=''||$request->hourM!=''||$request->empM!=''||$request->noteM!='') {
-            $appointment = DB::table('appointments')
+            /*$appointment = DB::table('appointments')
                 ->where('prospect_id', '=', $prospect->id)
                 ->orderBy('id','desc')
                 ->first();
@@ -594,7 +594,8 @@ $pros->user_id=Auth::user()->id;
                 $appointment->emplacement = $request->empM;
                 $appointment->note = $request->noteM;
                 $appointment->save();
-            }
+            }*/
+            $prospect->appointment_done = 'abc';
         }
 
         return response($prospect, 200)
