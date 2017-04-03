@@ -583,7 +583,7 @@ $pros->user_id=Auth::user()->id;
 
         $prospect->save();
 
-        if($request->dateM!=''||$request->hourM!=''||$request->empM!=''||$request->noteM!='') {
+        //if($request->dateM!=''||$request->hourM!=''||$request->empM!=''||$request->noteM!='') {
             /*$appointment = DB::table('appointments')
                 ->where('prospect_id', '=', $prospect->id)
                 ->orderBy('id','desc')
@@ -595,8 +595,8 @@ $pros->user_id=Auth::user()->id;
                 $appointment->note = $request->noteM;
                 $appointment->save();
             }*/
-            $prospect->appointment_done = 'abc';
-        }
+            //$prospect->appointment_done = 'abc';
+        //}
 
         return response($prospect, 200)
             ->header('Content-Type', 'application/json');
