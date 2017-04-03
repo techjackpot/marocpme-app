@@ -76,6 +76,12 @@ $('.inpHour').clockpicker({
     autoclose: true,
     'default': 'now'
 });
+$('.clockpicker').clockpicker({
+    align: 'left',
+    placement: 'top',
+    autoclose: true,
+    'default': 'now'
+});
 $('.datePicker').datepicker({
     inline: true,
     //nextText: '&rarr;',
