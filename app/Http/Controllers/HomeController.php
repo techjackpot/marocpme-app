@@ -529,6 +529,8 @@ $pros->user_id=Auth::user()->id;
 
         $prospect = prospects::find($id);
 
+        return response($prospect, 200)
+            ->header('Content-Type', 'application/json');
 
         $this->validate($request, array(
             'nomP' => 'required',
