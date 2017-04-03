@@ -270,11 +270,11 @@
                 </div>
 
                 <h5 style="color: #126388;font-size: 18px;margin-bottom: 40px ;display: inline-block;">Detail rendez-vous</h5>
-                    <div class="form-group">
+                    <!--<div class="form-group">
                         <label for="inpPros">Prospect</label>
                         <input type="text" class="form-control" name="ProspeM" id="inpPros" value="aaa@sada.com">
                         <div class="bar"></div>
-                    </div>
+                    </div>-->
                     <div class="form-group">
                         <label for="appDate">Date</label>
                         <input type="text" class="form-control datePicker" name="" id="appDate" value="22-21-2222">
