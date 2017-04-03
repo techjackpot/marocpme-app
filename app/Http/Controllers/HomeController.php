@@ -51,8 +51,7 @@ $prospects=DB::table('prospects')->where('user_id',Auth::user()->id)->count();
     {
 
         $mails = DB::table('prospects')->select('mail')->where('user_id','=',Auth::user()->id)->get();
-var_dump($mails);
-exit('333');
+        
         if(Auth::user()->isAdmin=='heIs'){
 
             $users=User::where('isAdmin','nop')->get();

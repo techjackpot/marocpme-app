@@ -75,7 +75,7 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true"></a>
                                 <select name="mailProspe" id="inpPros" class="form-control">
                                 <?php
                                     foreach($mails as $mail) { ?>
-                                    <option value="{{$mail}}">{{$mail}}</option>
+                                    <option value="{{$mail->mail}}">{{$mail->mail}}</option>
                                     <?php }
                                 ?>
                                 </select>
