@@ -224,7 +224,7 @@ height: 550px;">
 
 
                         $('#resp').hide();
-                        swal('Utilisateur Modifier','Utilisateur modifié avec succés','success');
+                        swal('Utilisateur Modifié','Utilisateur modifié avec succés','success');
                     },
                     error: function(data)
                     {
