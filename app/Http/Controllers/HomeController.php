@@ -385,7 +385,7 @@ public function editProspectDetails($id){
         ->first();
     if($appointment) {
         $prospect->date = $appointment->date;
-        $prospect->hour = $appointment->hour;
+        $prospect->hour = date("H:i",strtotime($appointment->hour));
         $prospect->emplacement = $appointment->emplacement;
         $prospect->note = $appointment->note;
     } else {
@@ -540,7 +540,7 @@ $pros->user_id=Auth::user()->id;
             'dateCP'=>'date_format:"Y-m-d"',
             'ProsDateC' => 'date_format:"Y-m-d"',
             'dateM' => 'date_format:"Y-m-d"',
-            'hourM' => 'date_format:"H:i:s"'
+            'hourM' => 'date_format:"H:i"'
         ));
 
         if($request->mailP!=$prospect->mail){
