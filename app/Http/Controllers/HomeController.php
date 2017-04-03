@@ -50,14 +50,16 @@ $prospects=DB::table('prospects')->where('user_id',Auth::user()->id)->count();
     public function calendar()
     {
 
+        $mails = DB::table('prospects')->select('mail')->where('user_id','=',Auth::user()->id)->get();
+
         if(Auth::user()->isAdmin=='heIs'){
 
             $users=User::where('isAdmin','nop')->get();
-            return view('calendar',['users'=>$users]);
+            return view('calendar',['users'=>$users,'mails'=>$mails]);
 
         }
         else
-        return view('calendar');
+        return view('calendar',['mails'=>$mails]);
 
     }
     public function getMyCalendar(){

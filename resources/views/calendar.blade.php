@@ -71,7 +71,14 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true"></a>
 
                             <div class="form-group">
                                 <label for="inpPros">Prospect</label>
-                                <input type="text" class="form-control" name="mailProspe" id="inpPros" placeholder="Saisissez le mail de votre prospect">
+                                <!--<input type="text" class="form-control" name="mailProspe" id="inpPros" placeholder="Saisissez le mail de votre prospect">-->
+                                <select name="mailProspe" id="inpPros" class="form-control">
+                                <?php
+                                    foreach($mails as $mail) { ?>
+                                    <option value="{{$mail}}">{{$mail}}</option>
+                                    <?php }
+                                ?>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="inpDate">Date</label>
