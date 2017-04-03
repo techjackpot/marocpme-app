@@ -277,18 +277,18 @@
                     </div>-->
                     <div class="form-group">
                         <label for="appDate">Date</label>
-                        <input type="text" class="form-control datePicker" name="" id="appDate" value="{{$prospect->date}}">
+                        <input type="text" class="form-control datePicker" name="dateM" id="appDate" value="{{$prospect->date}}">
                         <div class="bar"></div>
                     </div>
                     <div class="form-group">
                         <label for="inpHour">Heure</label>
-                        <input type="text" class="form-control inpHour" name="" id="appHour" value="{{$prospect->hour}}">
+                        <input type="text" class="form-control inpHour" name="hourM" id="appHour" value="{{$prospect->hour}}">
                         <div class="bar"></div>
 
                     </div>
                     <div class="form-group">
                         <label for="appEmp">Emplacement</label>
-                        <input type="text" class="form-control" name="" id="appEmp" value="{{$prospect->emplacement}}">
+                        <input type="text" class="form-control" name="empM" id="appEmp" value="{{$prospect->emplacement}}">
                         <div class="bar"></div>
                     </div>
                     <div class="form-group">
