@@ -379,6 +379,22 @@ public function editProspectDetails($id){
 
     $prospect=prospects::find($id);
 
+    $appointment = DB::table('appointments')
+        ->where('prospect_id', '=', $id)
+        ->orderBy('id','desc')
+        ->first();
+    if($appointment) {
+        $prospect->date = $appointment->date;
+        $prospect->hour = $appointment->hour;
+        $prospect->emplacement = $appointment->emplacement;
+        $prospect->note = $appointment->note;
+    } else {
+        $prospect->date = '';
+        $prospect->hour = '';
+        $prospect->emplacement = '';
+        $prospect->note = '';
+    }
+
     if($prospect&&$prospect->user_id==Auth::user()->id||Auth::user()->isAdmin=='heIs')
         return view('prospects.details',['prospect'=>$prospect]);
     else
