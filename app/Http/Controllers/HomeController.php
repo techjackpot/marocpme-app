@@ -589,14 +589,14 @@ $pros->user_id=Auth::user()->id;
                 ->where('prospect_id', '=', $prospect->id)
                 ->orderBy('id','desc')
                 ->first();
-            /*if($appointment) {
+            if($appointment) {
+                $appointment = appointment::find($appointment->id);
                 $appointment->date = $request->dateM;
                 $appointment->hour = $request->hourM;
                 $appointment->emplacement = $request->empM;
                 $appointment->note = $request->noteM;
                 $appointment->save();
-            }*/
-            $prospect->appointment_done = 'abc';
+            }
         }
         return response($prospect, 200)
             ->header('Content-Type', 'application/json');
