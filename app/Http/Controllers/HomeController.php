@@ -585,11 +585,11 @@ $pros->user_id=Auth::user()->id;
         $prospect->save();
 
         if($request->dateM!=''||$request->hourM!=''||$request->empM!=''||$request->noteM!='') {
-            /*$appointment = DB::table('appointments')
+            $appointment = DB::table('appointments')
                 ->where('prospect_id', '=', $prospect->id)
                 ->orderBy('id','desc')
                 ->first();
-            if($appointment) {
+            /*if($appointment) {
                 $appointment->date = $request->dateM;
                 $appointment->hour = $request->hourM;
                 $appointment->emplacement = $request->empM;
