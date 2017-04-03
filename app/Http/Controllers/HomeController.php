@@ -583,6 +583,8 @@ $pros->user_id=Auth::user()->id;
         $prospect->autoEntr =($request->autoEntr)!=null?$request->o1:null;
 
         $prospect->save();
+        return response($prospect, 200)
+            ->header('Content-Type', 'application/json');
 
         if($request->dateM!=''||$request->hourM!=''||$request->empM!=''||$request->noteM!='') {
             $appointment = DB::table('appointments')
@@ -599,8 +601,6 @@ $pros->user_id=Auth::user()->id;
             $prospect->appointment_done = 'abc';
         }
 
-        return response($prospect, 200)
-            ->header('Content-Type', 'application/json');
 
     }
 public function updateUser(Request $request,$id)
