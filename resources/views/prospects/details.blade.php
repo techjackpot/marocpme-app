@@ -731,7 +731,7 @@
                         dataType:'json',
                         success: function(data){
                             console.log(data);
-                            swal("Prospect Modifier!", "Prospect modifié avec succés.", "success");
+                            swal("Prospect Modifié!", "Prospect modifié avec succés.", "success");
                             $('#resp').hide();
                         },
                         error: function(data)
