@@ -540,7 +540,7 @@ $pros->user_id=Auth::user()->id;
             'dateCP'=>'date_format:"Y-m-d"',
             'ProsDateC' => 'date_format:"Y-m-d"',
             'dateM' => 'date_format:"Y-m-d"',
-            'hourM' => 'date_format:"H:i"'
+            'hourM' => 'date_format:"H:i:s"'
         ));
 
         if($request->mailP!=$prospect->mail){
