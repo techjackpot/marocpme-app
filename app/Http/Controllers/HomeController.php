@@ -529,9 +529,6 @@ $pros->user_id=Auth::user()->id;
 
         $prospect = prospects::find($id);
 
-        return response($prospect, 200)
-            ->header('Content-Type', 'application/json');
-
         $this->validate($request, array(
             'nomP' => 'required',
             'prenomP' => 'required',
@@ -571,7 +568,9 @@ $pros->user_id=Auth::user()->id;
         $prospect->secteur = ($request->secteurP)!=''?$request->secteurP:null;
         $prospect->fax = ($request->faxP)!=''?$request->faxP:null;
         $prospect->ville = ($request->villeP)!=''?$request->villeP:null;
-        $prospect->chiffreAff = $request->ztT;
+        $prospect->chiffreAff = ($request->ztT)?1:0;
+        $prospect->porteur = ($request->porteur)?1:0;
+        $prospect->upi = ($request->upi)?1:0;
 
 
         $prospect->imtiaz = ($request->imtiaz)!=null?1:0;
@@ -585,8 +584,8 @@ $pros->user_id=Auth::user()->id;
 
         $prospect->save();
 
-        //if($request->dateM!=''||$request->hourM!=''||$request->empM!=''||$request->noteM!='') {
-            /*$appointment = DB::table('appointments')
+        if($request->dateM!=''||$request->hourM!=''||$request->empM!=''||$request->noteM!='') {
+            $appointment = DB::table('appointments')
                 ->where('prospect_id', '=', $prospect->id)
                 ->orderBy('id','desc')
                 ->first();
@@ -596,9 +595,9 @@ $pros->user_id=Auth::user()->id;
                 $appointment->emplacement = $request->empM;
                 $appointment->note = $request->noteM;
                 $appointment->save();
-            }*/
-            //$prospect->appointment_done = 'abc';
-        //}
+            }
+            $prospect->appointment_done = 'abc';
+        }
 
         return response($prospect, 200)
             ->header('Content-Type', 'application/json');
