@@ -588,11 +588,13 @@ $pros->user_id=Auth::user()->id;
                 ->where('prospect_id', '=', $prospect->id)
                 ->orderBy('id','desc')
                 ->first();
-            $appointment->date = $request->dateM;
-            $appointment->hour = $request->hourM;
-            $appointment->emplacement = $request->empM;
-            $appointment->note = $request->noteM;
-            $appointment->save();
+            if($appointment) {
+                $appointment->date = $request->dateM;
+                $appointment->hour = $request->hourM;
+                $appointment->emplacement = $request->empM;
+                $appointment->note = $request->noteM;
+                $appointment->save();
+            }
         }
 
         return response($prospect, 200)
