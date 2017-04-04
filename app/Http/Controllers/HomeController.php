@@ -62,7 +62,7 @@ $prospects=DB::table('prospects')->where('user_id',Auth::user()->id)->count();
         return view('calendar',['mails'=>$mails]);
 
     }
-    public function getMyCalendar(){
+    public function getMyCalendar(Request $request){
 
 
             $events = array();
@@ -73,11 +73,11 @@ $prospects=DB::table('prospects')->where('user_id',Auth::user()->id)->count();
 
         if(Auth::user()->isAdmin!='heIs') {
             $appointments = $appointments->where('calendars.user_id',Auth::user()->id);
-        } /* else {
+        } else {
             if($request->selectUserF != '') {
                 $appointments = $appointments->where('calendars.user_id',$request->selectUserF);
             }
-        }*/
+        }
 
         $appointments = $appointments->select('appointments.*','prospects.mail','prospects.nom','prospects.prenom','calendars.user_id')
             ->get();

@@ -240,6 +240,7 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
                     $.ajax({
                         url: "{{route('appointments')}}",
                         dataType: 'json',
+                        data:{'selectUserF':$("#selectUserF").val()},
                         success: function(doc) {
                             console.log(doc);
                             var events = [];
@@ -294,20 +295,7 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
             });
 
             $("#selectUserF").change(function () {
-                var $user_id = $(this).val();
-                var evts = $("#Pmecalendar").fullCalendar("clientEvents", function(event) {
-                    if($user_id) {
-                        return $user_id == event.user_id;
-                    } else {
-                        return true;
-                    }
-                });
-                console.log(evts);
-                setTimeout(function() {
-                    $("#Pmecalendar").fullCalendar("updateEvents",evts);
-                    console.log('done');
-                }, 100);
-                console.log('finished');
+                $("#Pmecalendar").fullCalendar("refetchEvents");
             });
 
             $('#inpPros').autocomplete({

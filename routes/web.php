@@ -30,7 +30,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 
     Route::get('/calendar', 'HomeController@calendar');
-    Route::get('/calendar/events', 'HomeController@getMyCalendar')->name('appointments');
+    Route::get('/calendar/events', ['uses'=>'HomeController@getMyCalendar','as'=>'getallevents'])->name('appointments');
     Route::post('/AddNewAppoint', 'HomeController@storeAppointment')->name('NewAppointment');
 
     Route::get('/prospects', 'HomeController@prospect');
