@@ -238,7 +238,7 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
                 droppable: false,
                 events: function(start, end, timezone, callback) {
                     $.ajax({
-                        url: '{{route('appointments')}}',
+                        url: "{{route('appointments')}}",
                         dataType: 'json',
                         success: function(doc) {
                             console.log(doc);
