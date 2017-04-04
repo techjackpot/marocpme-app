@@ -245,14 +245,24 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
                             var events = [];
                             $(doc).each(function() {
 
-                                events.push({
-                                    title:$(this).attr('title'),
-                                    start: $(this).attr('start'),
-                                    emplacement:$(this).attr('emplacement'),
-                                    note:$(this).attr('note'),
-                                    prospect:$(this).attr('prospect'),
-                                    user_id:$(this).attr('user_id')
-                                });
+                                var flag = 1;
+                                if($('#selectUserF').length>0) {
+                                    var $user_id = $('#selectUserF').val();
+                                    if($user_id) {
+                                        flag = $user_id==$(this).attr('user_id');
+                                    }
+                                }
+
+                                if(flag==1) {
+                                    events.push({
+                                        title:$(this).attr('title'),
+                                        start: $(this).attr('start'),
+                                        emplacement:$(this).attr('emplacement'),
+                                        note:$(this).attr('note'),
+                                        prospect:$(this).attr('prospect'),
+                                        user_id:$(this).attr('user_id')
+                                    });
+                                }
                             });
                             callback(events);
                         }
@@ -294,17 +304,7 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
             });
 
             $("#selectUserF").change(function () {
-                var $user_id = $(this).val();
                 $("#Pmecalendar").fullCalendar('refetchEvents');
-                setTimeout(function() {
-                    $("#Pmecalendar").fullCalendar("removeEvents", function(event) {
-                        if($user_id) {
-                            return $user_id != event.user_id;
-                        } else {
-                            return true;
-                        }
-                    });
-                }, 500);
             });
 
 
