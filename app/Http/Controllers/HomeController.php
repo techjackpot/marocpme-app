@@ -71,7 +71,7 @@ $prospects=DB::table('prospects')->where('user_id',Auth::user()->id)->count();
             ->join('calendars', 'calendars.id', '=', 'appointments.calendar_id')
             ->join('prospects', 'prospects.id', '=', 'appointments.prospect_id');
 
-        if(Auth::user()->isAdmin=='heIs') {
+        if(Auth::user()->isAdmin!='heIs') {
             $appointments = $appointments->where('calendars.user_id',Auth::user()->id);
         }
 
