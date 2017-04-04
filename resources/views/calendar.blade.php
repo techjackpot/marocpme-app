@@ -294,11 +294,14 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
             });
 
             $("#selectUserF").change(function () {
+                var $user_id = $(this).val();
+                $("#Pmecalendar").fullCalendar('refetchEvents');
                 $("#Pmecalendar").fullCalendar("removeEvents", function(event) {
-                    return $("#selectUserF").val() != event.user_id;
+                    if($user_id) {
+                        return $user_id != event.user_id;
+                    }
                 });
             });
-
 
             $('#inpPros').autocomplete({
 
