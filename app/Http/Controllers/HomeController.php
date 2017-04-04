@@ -66,13 +66,13 @@ $prospects=DB::table('prospects')->where('user_id',Auth::user()->id)->count();
 
 
             $events = array();
-            
+
         $appointments = DB::table('appointments')
             ->join('calendars', 'calendars.id', '=', 'appointments.calendar_id')
             ->join('prospects', 'prospects.id', '=', 'appointments.prospect_id');
 
         if(Auth::user()->isAdmin=='heIs') {
-            $appointments->where('calendars.user_id',Auth::user()->id);
+            $appointments = $appointments->where('calendars.user_id',Auth::user()->id);
         }
 
         $appointments = $appointments->select('appointments.*','prospects.mail','prospects.nom','prospects.prenom')
