@@ -22,7 +22,7 @@
                         @if(isset($users))
                         <div class="input-group" >
                             <select id="selectUserF" name="selectUserF"  style="height: 50px;width: 100%;">
-                                <option value="" disabled selected>Utilisateurs</option>
+                                <option value="" selected>Utilisateurs</option>
                                 <?php
                                 foreach($users as $user){ ?>
                                 <option value="{{$user->id}}">{{$user->nom.' '.$user->prenom}}</option>
@@ -250,7 +250,8 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
                                     start: $(this).attr('start'),
                                     emplacement:$(this).attr('emplacement'),
                                     note:$(this).attr('note'),
-                                    prospect:$(this).attr('prospect')
+                                    prospect:$(this).attr('prospect'),
+                                    user_id:$(this).attr('user_id')
                                 });
                             });
                             callback(events);
@@ -292,12 +293,12 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
 
             });
 
-            $("#filter").change(function () {
+            $("#selectUserF").change(function () {
                 $("#Pmecalendar").fullCalendar("removeEvents", filter);
             });
 
             function filter(event) {
-                return $("#filter > option:selected").attr("id") === event.id;
+                return $("#selectUserF").val() === event.user_id;
             }
 
 
