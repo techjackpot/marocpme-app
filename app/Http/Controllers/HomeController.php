@@ -51,7 +51,7 @@ $prospects=DB::table('prospects')->where('user_id',Auth::user()->id)->count();
     {
 
         $mails = DB::table('prospects')->select('mail')->where('user_id','=',Auth::user()->id)->get();
-        
+
         if(Auth::user()->isAdmin=='heIs'){
 
             $users=User::where('isAdmin','nop')->get();
@@ -66,12 +66,16 @@ $prospects=DB::table('prospects')->where('user_id',Auth::user()->id)->count();
 
 
             $events = array();
-
+            
         $appointments = DB::table('appointments')
             ->join('calendars', 'calendars.id', '=', 'appointments.calendar_id')
-            ->join('prospects', 'prospects.id', '=', 'appointments.prospect_id')
-            ->where('calendars.user_id',Auth::user()->id)
-            ->select('appointments.*','prospects.mail','prospects.nom','prospects.prenom')
+            ->join('prospects', 'prospects.id', '=', 'appointments.prospect_id');
+
+        if(Auth::user()->isAdmin=='heIs') {
+            $appointments->where('calendars.user_id',Auth::user()->id);
+        }
+
+        $appointments = $appointments->select('appointments.*','prospects.mail','prospects.nom','prospects.prenom')
             ->get();
 
         $e = array();
