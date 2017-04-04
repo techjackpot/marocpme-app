@@ -302,9 +302,12 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
                         return true;
                     }
                 });
+                console.log(evts);
                 setTimeout(function() {
                     $("#Pmecalendar").fullCalendar("updateEvents",evts);
+                    console.log('done');
                 }, 100);
+                console.log('finished');
             });
 
             $('#inpPros').autocomplete({
