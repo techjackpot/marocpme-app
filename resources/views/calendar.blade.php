@@ -25,16 +25,16 @@
                                 <option value="" disabled selected>Utilisateurs</option>
                                 <?php
                                 foreach($users as $user){ ?>
-                                <option value="{{$user->nom}}">{{$user->nom.' '.$user->prenom}}</option>
+                                <option value="{{$user->id}}">{{$user->nom.' '.$user->prenom}}</option>
                                 <?php
                                 }
                                 ?>
                             </select>
                             <span class="input-group-btn">
-    <a id="filterUser" href="#"> <img style="width: 60px;
+    <img style="width: 60px;
 left: -5px;
 position: relative;
-top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true"></a>
+top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
   </span>
                         </div>
                         @endif
