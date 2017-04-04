@@ -62,7 +62,7 @@ $prospects=DB::table('prospects')->where('user_id',Auth::user()->id)->count();
         return view('calendar',['mails'=>$mails]);
 
     }
-    public function getMyCalendar(Request $request){
+    public function getMyCalendar(){
 
 
             $events = array();
