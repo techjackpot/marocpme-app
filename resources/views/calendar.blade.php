@@ -302,7 +302,9 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
                         return true;
                     }
                 });
-                $("#Pmecalendar").fullCalendar("updateEvents",evts);
+                setTimeout(function() {
+                    $("#Pmecalendar").fullCalendar("updateEvents",evts);
+                }, 100);
             });
 
             $('#inpPros').autocomplete({
