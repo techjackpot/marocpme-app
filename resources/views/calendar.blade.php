@@ -295,8 +295,7 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
 
             $("#selectUserF").change(function () {
                 $("#Pmecalendar").fullCalendar("removeEvents", function(event) {
-                    console.log(event);
-                    return $("#selectUserF").val() == event.user_id;
+                    return $("#selectUserF").val() != event.user_id;
                 });
             });
 
