@@ -93,14 +93,15 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <input type="hidden" id="delete-url" value="">
                     <div class="modal-body">
                         <div class="container-fluid">
                             <div class="col-md-12" style="text-align: center;margin:2em 0;">
                                 <h4>Vous ètes sur que vous voulez supprimer ce prospect</h4>
                                 <img src="{{asset('img/prospect/confirm_delete.png')}}" alt="" style="width:80px;margin:2em 0;">
                                 <div>
-                                    <a href="#" class="confirm_btn">Annuler</a>
-                                    <a href="#" class="confirm_btn">Confirmer</a>
+                                    <a href="#" class="confirm_btn" data-dismiss="modal">Annuler</a>
+                                    <a href="#" class="confirm_btn confirm_yes">Confirmer</a>
                                 </div>
                             </div>
                         </div>
@@ -558,6 +559,30 @@ $('.nextLi').on('click', function(){
                     });
 
         });*/
+            $('#deleteProsp').on('show.bs.modal', function(event) {
+                var button = $(event.relatedTarget)
+                var recipient = button.data('delete')
+                $("#delete_url").val(recipient);
+            })
+            $(".confirm_yes").on('click', function() {
+                var url =$("#delete_url").val();
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    datatype: 'json',
+                    success: function (data) {
+                        swal("Supprimé!", "Ce prospect est supprimé avec succès.", "success");
+                        $('#listUsers').DataTable().draw(false);
+                    },
+                    error: function () {
+                        swal("erreur!", url, "warning");
+                    }
+
+
+                });
+
+                swal("Supprimé!", "Ce prospect est supprimé avec succès.", "success");
+            });
             $(".AE input").prop('disabled', true);
             $(".AE input").prop('checked', false);
             $("#AutoEntre").prop('checked', false);
