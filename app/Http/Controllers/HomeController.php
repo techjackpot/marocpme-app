@@ -546,7 +546,7 @@ $pros->user_id=Auth::user()->id;
             'mailP'  => 'required',
             'RSP'=> 'required',
             'telP'=>'digits:10',
-            'sexP' => 'required|in:M,F',
+            //'sexP' => 'required|in:M,F',
             'dateCP'=>'date_format:"Y-m-d"',
             'ProsDateC' => 'date_format:"Y-m-d"',
             'dateM' => 'date_format:"Y-m-d"',
@@ -571,7 +571,7 @@ $pros->user_id=Auth::user()->id;
         $prospect->tel=$request->telP;
         $prospect->fonction=$request->fonctionP;
         $prospect->mail=$request->mailP;
-        $prospect->sex=$request->sexP;
+        $prospect->sex=($request->sexP)!=''?$request->sexP:null;
 
         $prospect->RS = $request->RSP;
         $prospect->dateCreation = ($request->dateCP)!=''?$request->dateCP:null;
