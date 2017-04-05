@@ -904,6 +904,7 @@ table.dataTable.cell-border tbody td{ border-top: none!important;}
 	background-color: #fff;
 	padding: 6px 20px 6px 10px;
 	box-shadow: 1px 1px 8px -3px;
+	display: none;
 }
 #search img {
 	width: 20px;
