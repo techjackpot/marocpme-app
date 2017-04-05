@@ -582,6 +582,7 @@ $('.nextLi').on('click', function(){
                 });
 
                 swal("Supprimé!", "Ce prospect est supprimé avec succès.", "success");
+                $('#deleteProsp').modal('hide');
             });
             $(".AE input").prop('disabled', true);
             $(".AE input").prop('checked', false);
