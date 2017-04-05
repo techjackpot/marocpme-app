@@ -477,7 +477,7 @@ if($thisuser->active=='forNow') {
                 'ProsPrenom' => 'required',
                 'ProsNom' => 'required',
                 'ProsMail' => 'required|email|unique:prospects,mail',
-                'Prossex' => 'required|in:M,F',
+                //'Prossex' => 'required|in:M,F',
                 'ProsTel'=>'digits:10',
                 'ProsRS'=>'required|unique:prospects,RS',
                 'ProsDateC' => 'date_format:"Y-m-d"',
@@ -493,7 +493,7 @@ $pros->user_id=Auth::user()->id;
         $pros->prenom=$request->ProsPrenom;
         $pros->fonction = ($request->ProsFonction)!=''?$request->ProsFonction:null;
         $pros->mail = $request->ProsMail;
-        $pros->sex = $request->Prossex;
+        $pros->sex = ($request->Prossex)!=''?$request->Prossex:null;
         $pros->tel = ($request->ProsTel)!=''?$request->ProsTel:null;
 
         $pros->RS = $request->ProsRS;
