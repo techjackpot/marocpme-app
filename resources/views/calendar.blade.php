@@ -89,12 +89,13 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
                             <div class="form-group">
                                 <label for="inpHour">Heure</label>
                                 <input type="text" class="form-control clockpicker" name="hourM" id="inpHour">
-                                <span> <img src="{{asset('img/clock-circular-outline.png')}}" alt=""></span>
+                                <span> <img src="{{asset('img/prospect/hour.png')}}" alt=""></span>
 
                             </div>
                             <div class="form-group">
                                 <label for="inpEmp">Emplacement</label>
                                 <input type="text" class="form-control" name="empM" id="inpEmp">
+                                <span> <img src="{{asset('img/prospect/emplacement.png')}}" alt=""></span>
                             </div>
                             <div class="form-group">
                                 <label for="inpN">Note</label>
