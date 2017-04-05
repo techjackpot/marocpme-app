@@ -38,7 +38,7 @@
 <div class="Pbody">
 
         <div class="form-group">
-            <label for="nomP">Nom</label>
+            <label for="nomP"><img src="{{asset('img/prospect/nom.png')}}">Nom</label>
             <input type="text" class="form-control" name="nomP" id="nomP" value="{{$prospect->nom}}">
             <div class="bar"></div>
         </div>
