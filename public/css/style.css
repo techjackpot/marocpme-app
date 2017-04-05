@@ -1241,3 +1241,19 @@ td .viewVisit:hover>img
 	margin-right: 0.7em;
 	transform: scale(0.7);
 }
+
+.confirm_no {
+	width: 196px;
+	height: 42px;
+	border-radius: 21px;
+	background-color: #136182;
+	border: solid 1px rgba(0, 0, 0, 0.48);
+}
+
+.confirm_yes {
+	width: 196px;
+	height: 42px;
+	object-fit: contain;
+	border-radius: 21px;
+	background-color: #4eb018;
+}

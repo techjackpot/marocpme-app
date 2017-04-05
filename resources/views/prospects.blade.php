@@ -92,15 +92,15 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
         <div class="modal fade" id="deleteProsp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <div class="modal-body">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <p>Vous ètes sur que vous voulez supprimer ce prospect</p>
-                                    <img src="{{asset('img/prospect/confirm_delete.png')}}" alt="">
+                        <div class="container-fluid">
+                            <div class="col-md-12" style="text-align: center;margin:2em 0;">
+                                <h4>Vous ètes sur que vous voulez supprimer ce prospect</h4>
+                                <img src="{{asset('img/prospect/confirm_delete.png')}}" alt="" style="width:80px;margin:2em 0;">
+                                <div>
+                                    <a href="#" class="confirm_no">Annuler</a>
+                                    <a href="#" class="confirm_yes">Confirmer</a>
                                 </div>
                             </div>
                         </div>
