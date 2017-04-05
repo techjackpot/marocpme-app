@@ -223,7 +223,7 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after { width: 50%; }
 #user-nav {
 	position: absolute;
 	right: 25px;
-	top:10px;
+	top:16px;
 	z-index: 20;
 	margin: 0;
 border: 0;
@@ -329,19 +329,22 @@ border: 0;
 }
 #breadcrumb a {
 	pointer-events: none;
-	padding: 8px 20px 8px 10px;
+	padding: 18px 20px 18px 10px;
 	display: inline-block;
 	background-image: url('../img/breadcrumb.png');
 	background-position: center right;
 	background-repeat: no-repeat;
-	font-size: 24px;
+	font-size: 2px;
 	font-weight: normal;
 	font-style: normal;
 	font-stretch: normal;
-	line-height: 2.79;
+	line-height: 40px;
 	letter-spacing: normal;
 	text-align: justify;
 	color: #3f4244;
+}
+#breadcrumb a img {
+	height: 35px;
 }
 #breadcrumb a:hover {
 	color: #333333;
@@ -887,13 +890,15 @@ table.dataTable.cell-border tbody td{ border-top: none!important;}
 #search {
 	position: absolute;
 	z-index: 25;
-	top: 13px;
+	top: 17px;
 	left: 450px;
 	border: 1px solid transparent;
 	border-radius: 25px;
 	background-color: #fff;
-	padding: 8px 20px 8px 10px;
-
+	padding: 6px 20px 6px 10px;
+}
+#search img {
+	width: 20px;
 }
 #search input[type=text] {
 	padding: 4px 10px 5px;
