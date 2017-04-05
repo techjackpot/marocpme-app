@@ -150,7 +150,8 @@
 
                         <label>Note</label>
                         <blockquote>
-                            <textarea class="note" name="noteM" id="inpN" cols="30" rows="10"></textarea>
+                            <!--<textarea class="note" name="noteM" id="inpN" cols="30" rows="10"></textarea>-->
+                            <h4 class="note">Note</h4>
                         </blockquote>
                     </div>
 
