@@ -105,7 +105,7 @@ $prospects=DB::table('prospects')->where('user_id',Auth::user()->id)->count();
 
            'mailProspe'=>'required|email',
             'dateM'=>'required|date_format:"Y-m-d"',
-            'hourM' => 'required|date_format:"H:m"',
+            'hourM' => 'required|date_format:"H:i"',
         ));
         $prospect = prospects::where('mail', '=', $request->mailProspe)->first();
         if ($prospect === null) {
