@@ -1242,18 +1242,17 @@ td .viewVisit:hover>img
 	transform: scale(0.7);
 }
 
-.confirm_no {
+.confirm_btn {
 	width: 196px;
 	height: 42px;
 	border-radius: 21px;
-	background-color: #136182;
-	border: solid 1px rgba(0, 0, 0, 0.48);
+	background-color: rgba(0, 0, 0, 0.48);
+	border: solid 1px #136182;
+	display: inline-block;
+	margin:0 1em;
+	transition: all ease 0.5s;
 }
 
-.confirm_yes {
-	width: 196px;
-	height: 42px;
-	object-fit: contain;
-	border-radius: 21px;
+.confirm_btn:hover {
 	background-color: #4eb018;
 }

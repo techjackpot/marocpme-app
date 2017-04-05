@@ -99,8 +99,8 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
                                 <h4>Vous ètes sur que vous voulez supprimer ce prospect</h4>
                                 <img src="{{asset('img/prospect/confirm_delete.png')}}" alt="" style="width:80px;margin:2em 0;">
                                 <div>
-                                    <a href="#" class="confirm_no">Annuler</a>
-                                    <a href="#" class="confirm_yes">Confirmer</a>
+                                    <a href="#" class="confirm_btn">Annuler</a>
+                                    <a href="#" class="confirm_btn">Confirmer</a>
                                 </div>
                             </div>
                         </div>
