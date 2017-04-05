@@ -199,7 +199,7 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after { width: 50%; }
 
 /* Header */
 #header {
-	height: 77px;
+	height: 99px;
 	position: relative;
 	width: 100%;
 	z-index: -9;
@@ -325,7 +325,7 @@ border: 0;
 }
 #breadcrumb a {
 	pointer-events: none;
-	padding: 8px 20px 8px 10px;
+	padding: 30px 20px 29px 10px;
 	display: inline-block;
 	background-image: url('../img/breadcrumb.png');
 	background-position: center right;
@@ -883,7 +883,7 @@ table.dataTable.cell-border tbody td{ border-top: none!important;}
 #search {
 	position: absolute;
 	z-index: 25;
-	top: 13px;
+	top: 24px;
 	left: 450px;
 	border: 1px solid transparent;
 	border-radius: 25px;
