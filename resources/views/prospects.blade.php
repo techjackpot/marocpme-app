@@ -381,7 +381,7 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="inpHour">Heure</label>
-                                                        <input type="text" class="form-control" name="hourM" id="inpHour">
+                                                        <input type="text" class="form-control clockpicker" name="hourM" id="inpHour">
                                                         <span> <img src="{{asset('img/prospect/hour.png')}}" alt=""></span>
 
                                                     </div>
