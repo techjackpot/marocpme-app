@@ -230,6 +230,10 @@ border: 0;
 	background-color: transparent!important;
 }
 
+#user-nav img {
+	width: 44px;
+}
+
  #sidebar li a i {
 	opacity: .5; 
 	margin-top: 2px;
