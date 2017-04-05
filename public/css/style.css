@@ -602,7 +602,7 @@ form {
 #sidebar > ul > li.active a{ color:#fff; text-decoration:none;background-color: #1e84a6;}
 
 #sidebar > ul > li > a:hover,#sidebar > ul > li.active {
-	background: linear-gradient(to top, rgba(18, 99, 136, 0.25), rgba(40, 157, 189, 0.25))
+	background: linear-gradient(45deg, rgba(18, 99, 136, 0.45), rgba(40, 157, 189, 0.45));
 	color: #fff;
 }
 @media (max-width: 480px) {
