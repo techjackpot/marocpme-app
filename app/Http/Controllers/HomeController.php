@@ -250,7 +250,7 @@ $calendar=new calendar;
               if($user->active=="forNow")
                 $actions.= '<a class="deleteVisit" href="#" data-delete="'.route('deleteThisUser',$user->id).'"> <img src="'.asset("img/003-delete-copie.png").'" onmouseover="hover(this,\''.asset("img/003-delete.png").'\');" onmouseout="unhover(this,\''.asset("img/003-delete-copie.png").'\');"></a>';
                 else if($user->active=="notAnymore")
-                    $actions.= '<a class="deleteVisit blocked" data-toggle="modal" data-target="#deleteProsp" href="#" data-delete="'.route('deleteThisUser',$user->id).'"> <img src="'.asset("img/003-delete.png").'" onmouseover="hover(this,\''.asset("img/003-delete-copie.png").'\');" onmouseout="unhover(this,\''.asset("img/003-delete.png").'\');"></a>';
+                    $actions.= '<button class="deleteVisit blocked" data-toggle="modal" data-target="#deleteProsp" href="#" data-delete="'.route('deleteThisUser',$user->id).'"> <img src="'.asset("img/003-delete.png").'" onmouseover="hover(this,\''.asset("img/003-delete-copie.png").'\');" onmouseout="unhover(this,\''.asset("img/003-delete.png").'\');"></button>';
 
 
                 return $actions;
