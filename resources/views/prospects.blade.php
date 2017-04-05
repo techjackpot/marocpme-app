@@ -89,6 +89,26 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
 
         </div>
 
+        <div class="modal fade" id="deleteProsp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <p>Vous ètes sur que vous voulez supprimer ce prospect</p>
+                                    <img src="{{asset('img/prospect/" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="modal fade" id="newProsp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -501,7 +521,7 @@ $('.nextLi').on('click', function(){
 
 
 
-        $('#listUsers').on('click', '.deleteVisit', function (e) {
+        /*$('#listUsers').on('click', '.deleteVisit', function (e) {
             var url =$(this).data('delete');
             e.preventDefault();
             swal({
@@ -537,7 +557,7 @@ $('.nextLi').on('click', function(){
                         }
                     });
 
-        });
+        });*/
             $(".AE input").prop('disabled', true);
             $(".AE input").prop('checked', false);
             $("#AutoEntre").prop('checked', false);
