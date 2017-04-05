@@ -38,27 +38,27 @@
 <div class="Pbody">
 
         <div class="form-group">
-            <label for="nomP"><img src="{{asset('img/prospect/nom.png')}}">Nom</label>
+            <label for="nomP"><img src="{{asset('img/prospect/nom.png')}}" class="pros-icon">Nom</label>
             <input type="text" class="form-control" name="nomP" id="nomP" value="{{$prospect->nom}}">
             <div class="bar"></div>
         </div>
         <div class="form-group">
-            <label for="prenomP">Prénom</label>
+            <label for="prenomP"><img src="{{asset('img/prospect/nom.png')}}" class="pros-icon">Prénom</label>
             <input type="text" class="form-control" name="prenomP" id="prenomP" value="{{$prospect->prenom}}">
             <div class="bar"></div>
         </div>
         <div class="form-group">
-            <label for="fonctionP">Fonction</label>
+            <label for="fonctionP"><img src="{{asset('img/prospect/fonction.png')}}" class="pros-icon">Fonction</label>
             <input type="text" class="form-control" name="fonctionP" id="fonctionP" value="{{$prospect->fonction}}">
             <div class="bar"></div>
         </div>
         <div class="form-group">
-            <label for="mailP">Mail</label>
+            <label for="mailP"><img src="{{asset('img/prospect/mail.png')}}" class="pros-icon">Mail</label>
             <input type="email" class="form-control" name="mailP" id="mailP" value="{{$prospect->mail}}">
             <div class="bar"></div>
         </div>
         <div class="form-group">
-            <label for="telP">Tel</label>
+            <label for="telP"><img src="{{asset('img/prospect/tel.png')}}" class="pros-icon">Tel</label>
             <input type="text" class="form-control" name="telP" id="telP" value="{{$prospect->tel}}">
             <div class="bar"></div>
         </div>
@@ -115,38 +115,38 @@
                             <div class="Pbody">
 
                                     <div class="form-group">
-                                        <label for="RSP">Raison social</label>
+                                        <label for="RSP"><img src="{{asset('img/prospect/rs.png')}}" class="pros-icon">Raison social</label>
                                         <input type="text" class="form-control" name="RSP" id="RSP" value="{{$prospect->RS}}">
                                         <div class="bar"></div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="dateCP">Date de création</label>
+                                        <label for="dateCP"><img src="{{asset('img/prospect/date.png')}}" class="pros-icon">Date de création</label>
                                         <input type="text" class="form-control datePicker" name="dateCP" id="dateCP" value="{{$prospect->dateCreation}}">
                                         <div class="bar"></div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="activP">Activité</label>
+                                        <label for="activP"><img src="{{asset('img/prospect/activite.png')}}" class="pros-icon">Activité</label>
                                         <input type="text" class="form-control" name="activP" id="activP" value="{{$prospect->activite}}">
                                         <div class="bar"></div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="secteurP">Secteur</label>
+                                        <label for="secteurP"><img src="{{asset('img/prospect/secteur.png')}}" class="pros-icon">Secteur</label>
                                         <input type="text" class="form-control" name="secteurP" id="secteurP" value="{{$prospect->secteur}}">
                                         <div class="bar"></div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="villeP">Ville</label>
+                                        <label for="villeP"><img src="{{asset('img/prospect/ville.png')}}" class="pros-icon">Ville</label>
                                         <input type="text" class="form-control" name="villeP" id="villeP" value="{{$prospect->ville}}">
                                         <div class="bar"></div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="faxP">Fax</label>
+                                        <label for="faxP"><img src="{{asset('img/prospect/fax.png')}}" class="pros-icon">Fax</label>
                                         <input type="text" class="form-control" name="faxP" id="faxP" value="{{$prospect->fax}}">
                                         <div class="bar"></div>
                                     </div>
 
                                     <div class="form-group chiffre">
-                                        <label for="chiffAff">Chiffre d’affaire</label>
+                                        <label for="chiffAff"><img src="{{asset('img/prospect/chiffre.png')}}" class="pros-icon">Chiffre d’affaire</label>
                                         <input type="text" class="form-control" name="chiffAff" id="chiffAff" value="{{$prospect->chiffreAff=='zT' ?'De 0 à 10 MDH':'De 10 à 200 MDH'}}">
                                         <div class="bar"></div>
 
@@ -276,23 +276,23 @@
                         <div class="bar"></div>
                     </div>-->
                     <div class="form-group">
-                        <label for="appDate">Date</label>
+                        <label for="appDate"><img src="{{asset('img/prospect/date.png')}}" class="pros-icon">Date</label>
                         <input type="text" class="form-control datePicker" name="dateM" id="appDate" value="{{$prospect->date}}">
                         <div class="bar"></div>
                     </div>
                     <div class="form-group">
-                        <label for="inpHour">Heure</label>
+                        <label for="inpHour"><img src="{{asset('img/prospect/hour.png')}}" class="pros-icon">Heure</label>
                         <input type="text" class="form-control inpHour" name="hourM" id="appHour" value="{{$prospect->hour}}">
                         <div class="bar"></div>
 
                     </div>
                     <div class="form-group">
-                        <label for="appEmp">Emplacement</label>
+                        <label for="appEmp"><img src="{{asset('img/prospect/emplacement.png')}}" class="pros-icon">Emplacement</label>
                         <input type="text" class="form-control" name="empM" id="appEmp" value="{{$prospect->emplacement}}">
                         <div class="bar"></div>
                     </div>
                     <div class="form-group">
-                        <label for="inpN">Note</label>
+                        <label for="inpN"><img src="{{asset('img/prospect/note.png')}}" class="pros-icon">Note</label>
                         <textarea name="noteM" id="inpN" cols="30" rows="10" style="height:150px;">{{$prospect->note}}</textarea>
                         <div class="bar"></div>
                     </div>
