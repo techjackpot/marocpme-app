@@ -93,7 +93,7 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <input type="hidden" id="delete-url" value="">
+                    <input type="hidden" id="delete_url" value="">
                     <div class="modal-body">
                         <div class="container-fluid">
                             <div class="col-md-12" style="text-align: center;margin:2em 0;">
@@ -561,7 +561,6 @@ $('.nextLi').on('click', function(){
         });*/
             $('#deleteProsp').on('show.bs.modal', function(event) {
                 var button = $(event.relatedTarget)
-                console.log(button);
                 var recipient = button.data('delete')
                 $("#delete_url").val(recipient);
             })
