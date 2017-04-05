@@ -561,6 +561,7 @@ $('.nextLi').on('click', function(){
         });*/
             $('#deleteProsp').on('show.bs.modal', function(event) {
                 var button = $(event.relatedTarget)
+                console.log(button);
                 var recipient = button.data('delete')
                 $("#delete_url").val(recipient);
             })
