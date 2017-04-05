@@ -53,7 +53,7 @@
             <div class="bar"></div>
         </div>
         <div class="form-group">
-            <label for="mailP"><img src="{{asset('img/prospect/mail.png')}}" class="pros-icon">Mail</label>
+            <label for="mailP"><img src="{{asset('img/prospect/email.png')}}" class="pros-icon">Mail</label>
             <input type="email" class="form-control" name="mailP" id="mailP" value="{{$prospect->mail}}">
             <div class="bar"></div>
         </div>
