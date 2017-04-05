@@ -49,7 +49,7 @@
 
 
     <div class="group">
-        <img src="{{asset('img/calque-24.png')}}" alt="">
+        <img src="{{asset('img/calque-24.png')}}" alt="" style="width: 100%;">
     </div>
     <div class="group {{ $errors->has('email') ? ' has-error' : '' }}">
         <input id="email" type="email" name="email" value="{{ old('email') }} "><span class="highlight"></span><span class="bar"></span>
