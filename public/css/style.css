@@ -1235,3 +1235,9 @@ td .viewVisit:hover>img
 .fc-toolbar .fc-left{
     margin-bottom: 40px;
 }
+
+
+.pros-icon {
+	margin-right: 0.7em;
+	transform: scale(0.7);
+}
