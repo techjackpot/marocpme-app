@@ -265,9 +265,11 @@ border: 0;
 #sidebar > ul > li {
 	display: block;
 	position: relative;
+	border-bottom: solid 1px rgba(46, 172, 207, 0.3)
 }
 #sidebar > ul > li:last-child{
 	margin-top: 50px;
+	border-bottom: none;
 }
 #sidebar > ul > li > a {
 	padding: 10px 0 10px 15px;
