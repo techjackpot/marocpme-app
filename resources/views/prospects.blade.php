@@ -100,7 +100,7 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
                             <div class="row">
                                 <div class="col-md-8">
                                     <p>Vous ètes sur que vous voulez supprimer ce prospect</p>
-                                    <img src="{{asset('img/prospect/" alt="">
+                                    <img src="{{asset('img/prospect/confirm_delete.png')}}" alt="">
                                 </div>
                             </div>
                         </div>
