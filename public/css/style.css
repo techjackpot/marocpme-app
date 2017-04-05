@@ -1268,3 +1268,21 @@ td .viewVisit:hover>img
 	border-color: #4eb018;
 	color: #fff;
 }
+
+.special_select {
+	 height: 50px;
+	 width: 100%;
+	 border-radius:10px 0 0 10px;
+	 padding:0 15px;
+	 font-size: 18px;
+}
+.special_select option {
+	font-size: 14px;
+}
+
+.input-group-btn img {
+	width: 61px;
+	left: -7px;
+	top: -5px;
+	position: relative;;
+}

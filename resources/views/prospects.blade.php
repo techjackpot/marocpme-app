@@ -25,7 +25,7 @@
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     @if(isset($users))
             <div class="input-group" >
-                <select id="selectUserF" name="selectUserF" style="height: 50px;width: 105%; border-radius:10px; padding:0 10px;">
+                <select id="selectUserF" name="selectUserF" class="special_select">
                     <option value="" disabled selected>Utilisateurs</option>
                     <option value="allUsers" style="background-color: #00b3ee">Select Tous</option>
                     <?php
@@ -36,18 +36,15 @@
                     ?>
                 </select>
                 <span class="input-group-btn">
- <img style="width: 61px;
-left: -5px;
-position: relative;
-top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
-  </span>
+                    <img src="{{asset('img/filter.png')}}" aria-hidden="true">
+                </span>
             </div>
                     @endif
 </div>
 
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                 <div class="input-group">
-                    <select id="objVisite" name="objVisite"  style="height: 50px;width: 105%; border-radius:10px; padding:0 10px;">
+                    <select id="objVisite" name="objVisite" class="special_select">
                         <option value="" disabled selected>Objet de Visite</option>
                         <option value="_show_all_">Show all</option>
                         <option value="imtiaz">Imtiaz</option>
@@ -63,11 +60,8 @@ top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
                         <option value="consultance">Consultance</option>
                     </select>
                     <span class="input-group-btn">
-    <img style="width: 61px;
-left: -5px;
-position: relative;
-top: -5px;" src="{{asset('img/filter.png')}}" aria-hidden="true">
-  </span>
+                        <img src="{{asset('img/filter.png')}}" aria-hidden="true">
+                    </span>
                 </div>
                     </div>
             </div>
