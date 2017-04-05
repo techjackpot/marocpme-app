@@ -900,6 +900,7 @@ table.dataTable.cell-border tbody td{ border-top: none!important;}
 	border-radius: 25px;
 	background-color: #fff;
 	padding: 6px 20px 6px 10px;
+	box-shadow: 1px 1px 8px -3px;
 }
 #search img {
 	width: 20px;
