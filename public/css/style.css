@@ -545,6 +545,7 @@ form {
 }
 	 #sidebar > ul > li > a >img{
 		 position: relative!important;
+		 top:0;
 	 }
 #content {
 	margin-left: 43px;
