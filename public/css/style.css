@@ -211,7 +211,7 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after { width: 50%; }
 	overflow: hidden;
 	position: relative;
 	top: 26px;
-	width: 240px;
+	width: 220px;
 	display: block;
 	margin: 0 auto;
 }
@@ -223,11 +223,11 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after { width: 50%; }
 /* Top user navigation */
 #user-nav {
 	position: absolute;
-	right: 25px;
+	right: 35px;
 	top:16px;
 	z-index: 20;
 	margin: 0;
-border: 0;
+	border: 0;
 	background-color: transparent!important;
 }
 
@@ -314,8 +314,8 @@ border: 0;
 }
 /* Content */
 #content {
-	margin-left: 220px;
-	margin-right: 0;
+	margin-left: 280px;
+	margin-right: 20px;
 	position: relative;
 	width: auto;
 	padding: 40px 0;
@@ -327,7 +327,7 @@ border: 0;
 /* Breadcrumb */
 #breadcrumb {
 	position: absolute;
-	left: 225px;
+	left: 285px;
 	top:0;
 }
 #breadcrumb a {
@@ -894,7 +894,7 @@ table.dataTable.cell-border tbody td{ border-top: none!important;}
 	position: absolute;
 	z-index: 25;
 	top: 17px;
-	left: 450px;
+	left: 510px;
 	border: 1px solid transparent;
 	border-radius: 25px;
 	background-color: #fff;
