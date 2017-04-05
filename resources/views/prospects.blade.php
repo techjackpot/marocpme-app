@@ -25,7 +25,7 @@
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     @if(isset($users))
             <div class="input-group" >
-                <select id="selectUserF" name="selectUserF" style="height: 50px;width: 105%; border-radius:10px padding:0 10px;">
+                <select id="selectUserF" name="selectUserF" style="height: 50px;width: 105%; border-radius:10px; padding:0 10px;">
                     <option value="" disabled selected>Utilisateurs</option>
                     <option value="allUsers" style="background-color: #00b3ee">Select Tous</option>
                     <?php
