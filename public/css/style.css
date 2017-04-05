@@ -207,12 +207,13 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after { width: 50%; }
 	margin-top:10px;
 }
 #sidebar .brandD img {
-	left: 20px;
 	line-height: 600px;
 	overflow: hidden;
 	position: relative;
 	top: 26px;
-	width: 191px;
+	width: 240px;
+	display: block;
+	margin: 0 auto;
 }
 #sidebar  a.brandD {
 	display: block;
@@ -247,7 +248,7 @@ border: 0;
 	display: block;
 	float: left;
 	position: absolute;
-	width: 220px;
+	width: 260px;
 	z-index: 16;
 	top: 0;
 	background-image: linear-gradient(to top, #126388,#289dbd);
@@ -260,7 +261,7 @@ border: 0;
 	margin: 0px 0 0;
 	padding: 0;
 	position: absolute;
-	width: 220px;
+	width: 260px;
 }
 #sidebar > ul > li {
 	display: block;
@@ -1118,7 +1119,7 @@ padding-right: 0!important;
 }
 #sidebar > ul > li > a > img{
 	position: absolute;
-	line-height: 1em;
+	top: 14px;
 }
 
 .ui-menu .ui-menu-item a {
