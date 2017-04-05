@@ -601,6 +601,9 @@ form {
 }
 
 
+#sidebar > ul > li, #sidebar > ul > li > a {
+	transition: all 0.5s ease;
+}
 #sidebar > ul > li.active a{ color:#fff; text-decoration:none;background-color: #1e84a6;}
 
 #sidebar > ul > li > a:hover,#sidebar > ul > li.active {
